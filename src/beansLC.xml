@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<!-- bean id="marks1stSemObj" class="org.madhulika.java.springloosecoupling.Marks1stSem">
+		<property name="compSc" value="90" />
+		<property name="chemistry" value="86" />
+	</bean>
+	<bean id="marks2ndSemObj" class="org.madhulika.java.springloosecoupling.Marks2ndSem">
+		<property name="enggDrawing" value="92" />
+		<property name="physics" value="85" />
+	</bean-->
+	<bean id="marksBean" class="org.madhulika.java.springloosecoupling.Marks2ndSem">
+		<property name="enggDrawing" value="92.5" />
+		<property name="physics" value="85.5" />
+	</bean>
+	
+	<bean id="student" class="org.madhulika.java.springloosecoupling.Student">
+		<property name="studentName" value="Madhulika" />
+		<property name="studentId" value="123" />
+		<!-- property name="marks1stSem" ref="marks1stSemObj" />
+		<property name="marks2ndSem" ref="marks2ndSemObj" /-->
+		<property name="marksInterfaceObj" ref="marksBean" />
+	</bean>
+
+</beans>

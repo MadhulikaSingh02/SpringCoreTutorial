@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<bean id="student" class="org.madhulika.java.di.Student">
+	<property name="studentName" value="Madhulika"></property>
+	<property name="studentId" value="123456"></property>
+</bean>
+
+<bean id="venue" class="org.madhulika.java.di.Venue">
+	<constructor-arg name="venueName" value="KV1"></constructor-arg>
+	<constructor-arg name="venueId" value="007"></constructor-arg>
+	<constructor-arg name="hallNo" value="A123"></constructor-arg>
+</bean>
+
+<bean id="kv2venue" class="org.madhulika.java.di.Venue">
+	<constructor-arg name="venueName" value="KV2" type="java.lang.String"></constructor-arg>
+	<constructor-arg name="hallNo" value="B123"></constructor-arg>
+</bean>
+
+</beans>

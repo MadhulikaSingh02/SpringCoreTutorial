@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<context:annotation-config />  
+	<!-- for byName the ids should match with the variable name -->      
+	<bean id="HumanHeartObj" class="org.madhulika.java.springautowiring.Heart">
+		<property name="nameOfAnimal" value="Human" />
+		<property name="noOfHearts" value="1"/>
+	</bean>
+	<bean id="OctopusHeartObj" class="org.madhulika.java.springautowiring.Heart">
+		<property name="nameOfAnimal" value="Octopus" />
+		<property name="noOfHearts" value="3"/>
+	</bean>
+	
+	<!-- comment below 2 beans for testing @Qualifier -->
+	
+	<bean id="heart" class="org.madhulika.java.springautowiring.Heart" />
+<!-- 	<bean id="lungs" class="org.madhulika.java.springautowiring.Lungs" />
+	 -->
+	<!-- for byType the class name should match the type of the variable in the respective java class -->
+	<bean id="heartObj" class="org.madhulika.java.springautowiring.Heart" />
+	<bean id="lungsObj" class="org.madhulika.java.springautowiring.Lungs" />
+	
+	
+	<!-- bean id="humanBean" class="org.madhulika.java.springautowiring.Human" autowire="byName" /-->
+	<!-- bean id="humanBean" class="org.madhulika.java.springautowiring.Human" autowire="byType" /-->
+	<!-- bean id="humanBean" class="org.madhulika.java.springautowiring.Human" autowire="constructor" /-->
+	<bean id="humanBean" class="org.madhulika.java.springautowiring.Human" />
+	
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<bean id="marksObj" class="org.madhulika.java.di.object.Marks">
+		<property name="math" value="90" />
+		<property name="english" value="86" />
+	</bean>
+	<bean id="student" class="org.madhulika.java.di.object.Student">
+		<property name="studentName" value="Madhulika" />
+		<property name="studentId" value="123" />
+		<property name="marks" ref="marksObj" />
+	</bean>
+
+</beans>
